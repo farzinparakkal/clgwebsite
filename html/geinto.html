@@ -1,0 +1,93 @@
+<html>   
+   <head>
+      <title>Get in touch</title> 
+      <link rel="stylesheet" href="/css/style1.css">     
+      <script type = "text/javascript">
+          function validate() {
+      
+      if( document.myForm.Name.value == "" ) {
+         alert( "Please provide your name!" );
+         document.myForm.Name.focus() ;
+         return false;
+      }
+      if( document.myForm.name1.value == "" ) {
+         window.alert( "Please provide your Email!" );
+         document.myForm.name1.focus() ;
+         return false;
+      }
+      if( document.myForm.email.value == "" ) {
+         window.alert( "Please provide your Email!" );
+         document.myForm.email.focus() ;
+         return false;
+      }
+      // if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+      //    document.myForm.Zip.value.length != 6 ) {
+         
+      //    window.alert( "Please provide a zip in the format #####." );
+      //    document.myForm.Zip.focus() ;
+      //    return false;
+      // }
+      if( document.myForm.Country.value == "-1" ) {
+         alert( "Please provide your country!" );
+         return false;
+      }
+      return( true );
+   }
+      </script>      
+   </head>
+   
+   <body>
+    <div class="login-form">
+      <form action = "/html/about.html" name = "myForm" onsubmit = "return(validate());" class="frm">
+         <table cellspacing = "2" cellpadding = "2">
+            
+            <tr>
+               <td align = "right" style="font-size: 18;">First name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right" style="font-size: 18;">Second name</td>
+               <td><input type = "text" name = "name1" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right" style="font-size: 18;">E-mail</td>
+               <td><input type = "text" name = "email" /></td>
+            </tr>
+
+            <!-- <tr>
+                <td align = "right" style="font-size: 18;">Zip code</td>
+                <td><input type = "text" name = "Zip" /></td>
+             </tr> -->
+             
+             <tr>
+                <td align = "right" style="font-size: 18;">Country</td>
+                <td>
+                   <select name = "Country" style="font-size: 18;">
+                      <option value = "-1" selected style="font-size: 13;">[choose yours]</option>
+                      <option value = "1" style="font-size: 13;">USA</option>
+                      <option value = "2" style="font-size: 13;">UK</option>
+                      <option value = "3" style="font-size: 13;">INDIA</option>
+                   </select>
+                </td>
+             </tr>
+             
+             <tr>
+                <td align = "right"></td>
+                <td><input type = "submit" value = "Send" class="read-more" style=" display: inline-block;
+                  padding: 10px 20px;
+                  background-color: #4caf50;
+                  color: #4b0404;
+                  font-size: 19px;
+                  text-decoration: none;
+                  border-radius: 25px;
+                  margin-top: 15px;
+                  transition: 0.3s ease;"/></td>
+             </tr>
+             
+          </table>
+        </form>  
+    </div>    
+    </body>
+ </html>
